@@ -1,0 +1,115 @@
+<html lang="en">
+
+  <head>
+    <title>SEQURE - encryption, secrecy & reputability.</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/7adc3852c9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+  </head>
+
+  <body>
+    <div
+      class="logo"
+      style=" width: 18%;left: 40px !important; top: 0 !important;background-color: #f6f6f6; "
+    >
+      <p style=" font-size: 20px;color: #737afe; font-weight:bold;">SEQURE</p>
+      <p>Välkommen, {{username}}</p>
+      <a style="float: left; color:#222222;" href="#"> Inställningar</a>
+      <a
+        style="float: left; margin-left:15px; color:#222222;"
+        href="../logout"
+      >Logga ut</a>
+    </div>
+    <div class="chatt-application">
+
+      <div class="public-chatt-list">
+
+        <button onclick="" id="main" class="open-public-and-private-btn">
+          <label class="profile-picture"><i
+              class="fa-solid fa-earth-europe"
+            ></i></label>
+          ㅤOffentlig
+        </button>
+        <button onclick="" id="second-main" class="open-public-and-private-btn">
+          <label class="profile-picture"><i
+              class="fa-solid fa-lock"
+            ></i></label>
+          ㅤPrivat
+        </button>
+
+      </div>
+
+      <div class="chatt" id="public-chatt">
+        <div id="messages">
+          <ul id="messages-ul">
+            {{#each messages}}
+              <li>{{this.date}} - {{this.username}}: {{this.message}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <form id="send-container">
+          <input
+            type="text"
+            id="message-input"
+            name="message"
+            placeholder="Skriv ett meddelande"
+            value=""
+            maxlength="120"
+            required
+          />
+
+          <button type="submit" id="send-button"><i
+              style="color:#FFFFFF;"
+              class="fa-regular fa-paper-plane"
+            ></i></button>
+        </form>
+      </div>
+
+      {{! Privat Chatt }}
+
+      <div class="chatt" id="private-chatt" style="display:none;">
+        <div id="messages">
+          <ul id="privateMessages-ul">
+            {{#each messages}}
+              <li>{{this.date}} - {{this.username}}: {{this.message}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <form id="private-send-container">
+          <input
+            type="text"
+            id="private-message-input"
+            name="message"
+            placeholder="Skriv ett meddelande"
+            value=""
+            maxlength="120"
+            required
+          />
+
+          <button type="submit" id="send-button"><i
+              style="color:#FFFFFF;"
+              class="fa-regular fa-paper-plane"
+            ></i></button>
+        </form>
+      </div>
+    </div>
+    {{! ANvänds för att visa och dölja Privat/Offentliga chatt ruta }}
+    <script defer src="/js/index.js"></script>
+    <script defer src="/js/sendPub.js"></script>
+    <script defer src="/js/sendPriv.js"></script>
+    <script defer src="/js/fetchMessages.js"></script>
+    <script defer src="/js/fetchPrivateMessages.js"></script>
+  </body>
+
+</html>

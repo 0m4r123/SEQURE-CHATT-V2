@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "email": "demo@demo.com",
+      "username": "demo",
+      "password": "$2b$10$biCr0XJeaJFptTbAdDASSuxABhQQbDfzJ1XiIO632Auw301mXZ5LK"
+    },
+    {
+      "email": "demo2@demo2.com",
+      "username": "demo2",
+      "password": "$2b$10$5BgQAQTc47XSAsv873JCjO7FvsQ9ksAzFg39krymwBXvg4RB4oBxG"
+    }
+  ],
+  "messages": [
+    {
+      "date": "2023-2-22 | 11:17:14",
+      "username": "guest-651020",
+      "message": "Hej! Jag är ny här, behöver jag logga in för att se gruppen \"Privat\"?"
+    },
+    {
+      "date": "2023-2-22 11:17:42",
+      "username": "demo",
+      "message": "Ja det behöver du, rekommenderas till och med!"
+    }
+  ],
+  "private_messages": [
+    {
+      "date": "2023-2-22 | 12:57:25",
+      "username": "demo2",
+      "message": "Har nu skapat ett konto för att komma åt privat!"
+    },
+    {
+      "date": "2023-2-22 | 12:57:48",
+      "username": "demo",
+      "message": "Åhhh härligt! "
+    }
+  ]
+}
